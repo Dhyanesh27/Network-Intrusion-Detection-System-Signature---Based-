@@ -1,0 +1,16 @@
+cmd (as admin) :
+    cd "C:\Program Files\Redis"
+    redis-server.exe
+    
+termial 1:
+    cd backend
+    node server.js
+
+terminal 2:
+    python agent.py --backend http://localhost:4000 --jwt-token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2VudF9pZCI6InB5dGhvbi1hZ2VudC0xIiwiaWF0IjoxNzYzMzk4MTY3LCJleHAiOjE3NjM0ODQ1Njd9.dkaq7UsveCbMBls0K6KPEZn-uBIt_pIr15rTPRYjTpc"
+
+terminal 2b (new - signature monitor):
+    python agent.py --backend http://localhost:4000 --jwt-token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2VudF9pZCI6InB5dGhvbi1hZ2VudC0xIiwiaWF0IjoxNzYzMzk4MTY3LCJleHAiOjE3NjM0ODQ1Njd9.dkaq7UsveCbMBls0K6KPEZn-uBIt_pIr15rTPRYjTpc"
+
+terminal 3:
+    npm run dev
