@@ -1,0 +1,29 @@
+{
+  "name": "nids-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "ioredis": "^5.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "node-cron": "^4.2.1",
+    "prom-client": "^14.2.0",
+    "sqlite3": "^5.1.6",
+    "ws": "^8.18.3"
+  },
+  "optionalDependencies": {
+    "axios": "^1.13.1",
+    "express-rate-limit": "^6.11.2",
+    "express-validator": "^6.15.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
